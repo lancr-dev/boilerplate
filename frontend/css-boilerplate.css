@@ -1,0 +1,52 @@
+:root {
+  --color-primary: #3498db;
+  --color-secondary: #e74c3c;
+  --color-accent: #f1c40f;
+  --color-background: #ffffff;
+  --color-text: #333333;
+  --color-muted: #7f8c8d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100dvh;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  background-image: url('');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  scroll-behavior: smooth;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (max-width: 375px) {
+}
+
+@media (max-width: 480px) {
+}
+
+@media (max-width: 576px) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 1200px) {
+}

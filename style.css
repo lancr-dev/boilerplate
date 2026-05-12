@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.container {
+  width: min(1000px, 95%);
+  text-align: center;
+  background-color: aqua;
+  padding: min(50px, 6%);
+}
+h1 {
+  font-size: clamp(1.8rem, 7vw + 1rem, 3rem);
+}

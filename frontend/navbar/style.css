@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var();
+  box-shadow: -5px 0 10px black;
+}
+
+.logo {
+  color: var();
+  font-size: 1.2rem;
+}
+
+.logo span {
+  color: var();
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var();
+  transition: 0.3s;
+}
+.nav-links a:hover {
+  color: var();
+}
+
+.nav-btns {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sign-in-btn {
+  border: 2px solid var();
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: var();
+  color: var();
+  font-weight: bold;
+}
+
+.get-started-btn {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: var();
+  font-weight: bold;
+  color: var();
+}
+
+.side-bar-btn {
+  display: none;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  cursor: pointer;
+  padding: 1px 3px;
+}
+
+.close-side-bar {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  cursor: pointer;
+}
+
+.side-bar {
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 40px 50px;
+  z-index: 1;
+  height: 100%;
+  box-shadow: -2px 0 10px black;
+  backdrop-filter: blur(10px);
+}
+
+.side-bar a {
+  text-decoration: none;
+  color: var();
+  transition: 0.3s;
+}
+
+.side-bar a:hover {
+  color: var();
+}
+
+@media (max-width: 768px) {
+  .side-bar-btn {
+    display: flex;
+  }
+
+  .hide-on-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .side-bar {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.808);
+  }
+
+  .sign-in-btn {
+    padding: 8px 10px;
+  }
+
+  .get-started-btn {
+    padding: 10px 10px;
+  }
+}
