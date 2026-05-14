@@ -1,40 +1,117 @@
-.carousel {
-  margin: 100px auto;
-  width: 90%;
-  border: 5px solid red;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+  padding: 60px 20px;
+}
+
+/* SECTION */
+.carousel-section {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+/* WRAPPER */
+.carousel-wrapper {
   display: flex;
-  overflow-x: auto; /* to add horizontal scroll */
+  align-items: center;
+  gap: 12px;
 }
 
+/* VIEWPORT (IMPORTANT FIX) */
+.carousel-viewport {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+/* TRACK */
+.carousel {
+  display: flex;
+  gap: 16px;
+
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+
+  padding: 20px;
+
+  /* Prevent cut-off */
+  scroll-padding-left: 20px;
+  scroll-padding-right: 20px;
+}
+
+/* Hide scrollbar */
 .carousel::-webkit-scrollbar {
-  display: none; /* to hide the horizontal scroll */
+  display: none;
 }
 
-.group {
+/* CARD */
+.card {
+  min-width: 250px;
+  height: 160px;
+
+  flex: 0 0 auto;
+
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1em;
-  animation: spin 5s infinite linear;
-  padding-right: 1em;
+
+  font-size: 2rem;
+  font-weight: bold;
+
+  scroll-snap-align: start;
+
+  transition: transform 0.3s ease;
 }
 
-.card {
-  flex: 0 0 5em; /* shrink, grow, width */
-  height: 5em;
-  padding: 1em;
-  background-color: aqua;
-  font-size: 3em;
-  border-radius: 0.2em;
-  text-align: center;
-  align-content: center;
+.card:hover {
+  transform: scale(1.05);
 }
 
-@keyframes spin {
-  from {
-    translate: 0;
-  }
-  to {
-    translate: -100%;
+/* ARROWS (OUTSIDE, NO OVERLAP) */
+.arrow {
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+  border: none;
+
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+  flex-shrink: 0;
+}
+
+.arrow:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .card {
+    min-width: 200px;
   }
 }

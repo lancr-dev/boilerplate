@@ -3,28 +3,69 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Modern Carousel</title>
+
     <link rel="stylesheet" href="style.css" />
-    <title>Carousel</title>
   </head>
   <body>
-    <div class="carousel">
-      <div class="div group">
-        <div class="card">1</div>
-        <div class="card">2</div>
-        <div class="card">3</div>
-        <div class="card">4</div>
-        <div class="card">5</div>
-        <div class="card">6</div>
-      </div>
+    <section class="carousel-section">
+      <h2 class="title">Modern Carousel</h2>
 
-      <div aria-hidden class="div group">
-        <div class="card">1</div>
-        <div class="card">2</div>
-        <div class="card">3</div>
-        <div class="card">4</div>
-        <div class="card">5</div>
-        <div class="card">6</div>
+      <div class="carousel-wrapper">
+        <!-- Left Arrow -->
+        <button class="arrow" id="prevBtn">&#10094;</button>
+
+        <!-- VIEWPORT -->
+        <div class="carousel-viewport">
+          <!-- TRACK -->
+          <div class="carousel" id="carousel">
+            <div class="card">1</div>
+            <div class="card">2</div>
+            <div class="card">3</div>
+            <div class="card">4</div>
+            <div class="card">5</div>
+            <div class="card">6</div>
+            <div class="card">7</div>
+            <div class="card">8</div>
+            <div class="card">9</div>
+            <div class="card">10</div>
+          </div>
+        </div>
+
+        <!-- Right Arrow -->
+        <button class="arrow" id="nextBtn">&#10095;</button>
       </div>
-    </div>
+    </section>
+
+    <script src="script.js"></script>
   </body>
 </html>
+
+<!-- How to Replace Cards With Images -->
+<!-- Replace: <div class="card">1</div> -->
+
+<!-- With: <div class="card">
+  <img src="your-image.jpg" alt="">
+</div> -->
+
+<!-- .card {
+  overflow: hidden; /* IMPORTANT so image stays inside rounded corners */
+  position: relative;
+}
+
+/* image styling */
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* makes image behave like a "cover card" */
+  display: block;
+} -->
+
+<!-- Optional to look more premium -->
+<!-- .card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.4), transparent);
+} -->
